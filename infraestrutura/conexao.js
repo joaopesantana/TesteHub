@@ -1,4 +1,4 @@
-const mssql = require('mssql');
+const sql = require('mssql');
 
 const config = {
     user: 'sa',
@@ -10,8 +10,10 @@ const config = {
     }
 };
 
-const conexao = mssql.connect(config, async (err) => {
-    console.log(err);
+const conexao = sql.connect(config, (err) => {
+    if (err){
+        console.log(err);
+    }
     //const result = await mssql.query`select * from TBL_CLIENTE`
     //console.dir(result.recordset)
 });

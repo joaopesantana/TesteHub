@@ -8,10 +8,10 @@ conexao.connect(err => {
     } else {
         console.log('Banco de Dados conectado');
 
-        //Tabelas.init(conexao)
+        Tabelas.init(conexao)
         const app = customExpress()
         
-        app.listen(3000, () => console.log('Servidor rodando na porta 3000'))
+        app.listen(3001, () => console.log('Servidor rodando na porta 3001'))
     }
 })
 
